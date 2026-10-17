@@ -39,7 +39,8 @@ class AddEventActivity : AppCompatActivity() {
         }
 
         val eventTypes = arrayOf("Conference", "Workshop", "Seminar", "Social", "Other")
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, eventTypes)
+        val adapter = ArrayAdapter(this, R.layout.spinner_item, eventTypes)
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         spinnerType.adapter = adapter
 
         btnSave.setOnClickListener {
